@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: catalogo
+  labels:
+    app: catalogo
+    grupo: "2"

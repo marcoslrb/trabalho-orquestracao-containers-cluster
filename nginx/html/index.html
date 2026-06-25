@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo de Produtos e Categorias - Grupo 2, Tema 2">
+    <title>Catálogo de Produtos e Categorias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📦 Catálogo de Produtos e Categorias</h1>
+        <p class="subtitle">Grupo 2 – Tema 2 | Serviços de Redes</p>
+    </header>
+
+    <main>
+        <!-- ── Seção de Categorias ── -->
+        <section id="categorias-section">
+            <h2>📁 Categorias</h2>
+
+            <form id="form-categoria" class="form-card">
+                <h3 id="form-categoria-title">Nova Categoria</h3>
+                <input type="hidden" id="categoria-id">
+                <div class="form-group">
+                    <label for="categoria-nome">Nome</label>
+                    <input type="text" id="categoria-nome" placeholder="Nome da categoria" required>
+                </div>
+                <div class="form-group">
+                    <label for="categoria-descricao">Descrição</label>
+                    <textarea id="categoria-descricao" placeholder="Descrição (opcional)" rows="2"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" id="btn-cancelar-categoria" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+
+            <div id="categorias-list" class="cards-grid">
+                <p class="loading">Carregando categorias...</p>
+            </div>
+        </section>
+
+        <!-- ── Seção de Produtos ── -->
+        <section id="produtos-section">
+            <h2>🏷️ Produtos</h2>
+
+            <form id="form-produto" class="form-card">
+                <h3 id="form-produto-title">Novo Produto</h3>
+                <input type="hidden" id="produto-id">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="produto-nome">Nome</label>
+                        <input type="text" id="produto-nome" placeholder="Nome do produto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="produto-categoria">Categoria</label>
+                        <select id="produto-categoria" required>
+                            <option value="">Selecione...</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="produto-descricao">Descrição</label>
+                    <textarea id="produto-descricao" placeholder="Descrição (opcional)" rows="2"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="produto-preco">Preço (R$)</label>
+                        <input type="number" id="produto-preco" placeholder="0.00" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="produto-quantidade">Quantidade</label>
+                        <input type="number" id="produto-quantidade" placeholder="0" min="0" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-secondary" id="btn-cancelar-produto" style="display:none;">Cancelar</button>
+                </div>
+            </form>
+
+            <div id="produtos-list" class="cards-grid">
+                <p class="loading">Carregando produtos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Catálogo de Produtos – K3s Cluster | Grupo 2 &copy; 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
